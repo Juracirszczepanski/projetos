@@ -1,0 +1,26 @@
+.Footer{
+    background-color: #2F94EF;
+    color: #FFFFFF;
+}
+
+.row-footer{
+    margin: 0;
+    padding: 25px;
+}
+
+.redes-sociais-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-footer{
+    margin-bottom: 0;
+}

@@ -1,0 +1,21 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.Header{
+    background-color: #2F94EF;
+    min-height: 120px;
+}
+
+.nav-link {
+  color: #FFFFFF;
+}
+
+.Header.fixed-top{
+    animation: fadeIn 1.5s;
+}
