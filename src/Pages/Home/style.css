@@ -1,5 +1,5 @@
 .conteudo-principal-home{
-    padding: 48px 120px;
+    padding: 48px 120px 0 120px;
     text-align: center;
 }
 
@@ -9,5 +9,112 @@
 
 .img-banner-patroc{
     width: 100%;
+
+}
+
+.faixa-azul{
+    width: 100%;
+    min-height: 80px;
+    background-color: #2F94EF;
+    margin: 48px 0;
+}
+
+.titulos-home{
+    color: #2F94EF;
+    font-size: 40px;
+    font-weight:bold;
+    padding-bottom: 48px;
+}
+
+.linha-noticias{
+    margin-bottom: 20px;
+}
+
+.btn-noticia{
+    color: #FFFFFF;
+    background-color: #2F94EF;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.btn-noticia:hover{
+    color: #FFFFFF;
+    background-color: #3559E0;
+}
+
+.btn-noticias{
+    color: #FFFFFF;
+    background-color: #0C356A;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.btn-noticias:hover{
+    color: #FFFFFF;
+    background-color: #2F94EF;
+}
+
+.area-musicas{
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(185,185,185,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%);
+    margin: 48px 0;
+}
+
+.linha-musicas{
+    margin: 48px 0 0 0;
+}
+
+.linha-cards-musicas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-cards-musicas{
+    margin-bottom: 48px;
+}
+
+/* .titulo-musicas{
+    color: #0C356A;
+} */
+
+
+/*Responsividade:*/
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .conteudo-principal-home{
+        padding: 48px 40px;
+    }
+
+    .titulos-home{
+        font-size: 25px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .conteudo-principal-home{
+        padding: 48px 80px;
+    }
+
+    .titulos-home{
+        font-size: 35px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) 
+-Referente a página inicial de navegador, não precisa necessariamente ser estilizada */
+@media (min-width: 1200px) {
 
 }

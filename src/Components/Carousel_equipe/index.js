@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-import { MDBIcon } from 'mdb-react-ui-kit';
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 import Icon_Usuario from './../../Assets/e70a6296c2a79dc7a56ab05b103f38e8-sinal-do-usuario-com-fundo.png';
 
 
@@ -22,7 +22,9 @@ export default function Carousel_equipe() {
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
-                    <Button variant="primary"><MDBIcon fab icon="instagram" /></Button>
+                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                        <MDBIcon size='lg' fab icon='instagram' />
+                    </MDBBtn>
                 </Card.Body>
             </Card>
         </div>,
@@ -31,7 +33,9 @@ export default function Carousel_equipe() {
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
-                    <Button variant="primary"><MDBIcon fab icon="instagram" /></Button>
+                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                        <MDBIcon size='lg' fab icon='instagram' />
+                    </MDBBtn>
                 </Card.Body>
             </Card>
         </div>,
@@ -40,7 +44,9 @@ export default function Carousel_equipe() {
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
-                    <Button variant="primary"><MDBIcon fab icon="instagram" /></Button>
+                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                        <MDBIcon size='lg' fab icon='instagram' />
+                    </MDBBtn>
                 </Card.Body>
             </Card>
         </div>,
@@ -49,7 +55,9 @@ export default function Carousel_equipe() {
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
-                    <Button variant="primary"><MDBIcon fab icon="instagram" /></Button>
+                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                        <MDBIcon size='lg' fab icon='instagram' />
+                    </MDBBtn>
                 </Card.Body>
             </Card>
         </div>,
@@ -58,11 +66,29 @@ export default function Carousel_equipe() {
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
-                    <Button variant="primary"><MDBIcon fab icon="instagram" /></Button>
+                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                        <MDBIcon size='lg' fab icon='instagram' />
+                    </MDBBtn>
                 </Card.Body>
             </Card>
         </div>,
     ];
+    
+    const CustomPrevButton = ({ isDisabled }) => {
+        return (
+            <button disabled={isDisabled} type="button" className='btn-carousel-equipe'>
+                <MDBIcon fas icon="chevron-left" />
+            </button>
+        );
+    };
+    
+    const CustomNextButton = ({ isDisabled }) => {
+        return (
+            <button disabled={isDisabled} type="button" className='btn-carousel-equipe'>
+                <MDBIcon fas icon="chevron-right" />
+            </button>
+        );
+    };
     
     return(
         <AliceCarousel
@@ -71,6 +97,8 @@ export default function Carousel_equipe() {
             responsive={responsive}
             activeIndex={0}
             disableDotsControls
+            renderPrevButton={CustomPrevButton}
+            renderNextButton={CustomNextButton}
         />
     );
 }

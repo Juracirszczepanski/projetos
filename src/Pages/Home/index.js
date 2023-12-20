@@ -11,71 +11,67 @@ import './../../style.css'
 import './style.css';
 import banner_patrocidadores from './../../Assets/IA_Bannersite_patrocinadores-02_1920x100_-2023.jpg';
 import Carousel_equipe from "../../Components/Carousel_equipe";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import CardsMusicas from "../../Components/Cards_Musicas";
 
 
 function Home() {
 
+    const [noticias, setNoticias] = useState([]); // Lista de notícias
+    const [numNoticias, setNumNoticias] = useState(3); // Mostrar 3 notícias inicialmente
+
+    const carregarMais = () => {
+        setNumNoticias(numNoticias + 3); // Carregar mais 3 notícias
+    };
+
+    useEffect(() => {
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+        .then(res => {
+            setNoticias(res.data);
+        })
+        .catch(err => {
+            // Trate aqui qualquer erro que ocorrer
+            console.error(err);
+        })
+    }, []);
+
+    const noticiasExibidas = noticias.slice(0, numNoticias);
+
   return (
     <Container fluid>
-        <Header/>
+        <Header id='top'/>
         <Carousels/>
         <main className="conteudo-principal-home">
-            <Row>
+            <Row id="noticias">
                 <Col>
-                    <h1>NOTÍCIAS</h1>
+                    <h1 className="titulos-home">NOTÍCIAS</h1>
                     <Row>
-                        <Col>
+                    {noticiasExibidas.map((noticia, index) => (
+                        <Col xs={12} md={6} lg={4} key={index}  className="linha-noticias">
                             <MDBCard>
                                 <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
+                                <MDBCardImage 
+                                    src='https://mdbootstrap.com/img/new/standard/nature/111.webp' 
+                                    fluid 
+                                    alt='...'
+                                />
+                                <a>
                                     <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
+                                </a>
                                 </MDBRipple>
                                 <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
+                                <MDBCardTitle>{noticia.title}</MDBCardTitle>
+                                <MDBCardText>
+                                    {noticia.body}
+                                </MDBCardText>
+                                <MDBBtn href='#' className="btn-noticia">Button</MDBBtn>
                                 </MDBCardBody>
                             </MDBCard>
                         </Col>
-                        <Col>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                    <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </Col>
-                        <Col>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                    <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </Col>
+                        ))}
                     </Row>
+                    <MDBBtn className="btn-noticias" onClick={carregarMais}>Carregar mais</MDBBtn>
                 </Col>
             </Row>
             <Row className="banner-patrocidadores">
@@ -85,13 +81,38 @@ function Home() {
             </Row>
             <Row>
                 <Col>
-                    <h1>CONHEÇA NOSSOS LOCUTORES</h1>
+                    <h1 className="titulos-home">CONHEÇA NOSSOS LOCUTORES</h1>
                     <Carousel_equipe/>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <h1>Músicas mais tocadas</h1>
+                    <div className="faixa-azul"/>
+                </Col>
+            </Row>
+            <Row className="area-musicas">
+                <Col className="linha-musicas">
+                    <h1 className="titulos-home titulo-musicas">MÚSICAS MAIS TOCADAS</h1>
+                    <Row className="linha-cards-musicas" xs={12} md={8} lg={3}>
+                        <Col className="col-cards-musicas">
+                            <CardsMusicas/>
+                        </Col>
+                        <Col className="col-cards-musicas">
+                            <CardsMusicas/>
+                        </Col>
+                    </Row>
+                    <Row className="linha-cards-musicas" xs={12} md={8} lg={3}>
+                        <Col className="col-cards-musicas">
+                            <CardsMusicas/>
+                        </Col>
+                        <Col className="col-cards-musicas">
+                            <CardsMusicas/>
+                        </Col>
+                        <Col className="col-cards-musicas">
+                            <CardsMusicas/>
+                        </Col>
+                    </Row>
+
                 </Col>
             </Row>
         </main>

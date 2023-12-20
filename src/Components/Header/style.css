@@ -9,13 +9,54 @@
 
 .Header{
     background-color: #2F94EF;
-    min-height: 120px;
+    min-height: 110px;
 }
 
-.nav-link {
+.icon-top{
+  display: none;
+}
+
+.icon-top.show {
+  display: block;
+}
+
+.icone-arrow{
   color: #FFFFFF;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+.icone-arrow:hover{
+  color: #0C356A;
+}
+
+.icone-menu{
+  color: #FFFFFF;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+.icone-menu:hover{
+  color: #0C356A;
 }
 
 .Header.fixed-top{
-    animation: fadeIn 1.5s;
+  animation: fadeIn 1.5s;
+  min-height: 100px;
 }
+
+
+.nav-link {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.nav-link:hover{
+  color: #0C356A;
+}
+
+.navbar-nav .show>.nav-link, .navbar-nav .nav-link.active {
+  color: #FFFFFF;
+}
+
