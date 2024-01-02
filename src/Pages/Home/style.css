@@ -57,7 +57,7 @@
 .area-musicas{
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(185,185,185,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%);
+    /* background: radial-gradient(circle, rgba(185,185,185,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%); */
     margin: 48px 0;
 }
 
@@ -73,12 +73,10 @@
 
 .col-cards-musicas{
     margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-/* .titulo-musicas{
-    color: #0C356A;
-} */
-
 
 /*Responsividade:*/
 /* Extra small devices (portrait phones, less than 576px)*/

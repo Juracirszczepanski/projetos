@@ -4,12 +4,14 @@ import './../../style.css';
 import './style.css';
 import Logo from './../../Assets/MACAUBAS-FM-300x102 LOGO.png';
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function Header(){
 
   const [navbar, setNavbar] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(new Audio('https://players.hoost.com.br/modern/circle.php?ip=cast3.hoost.com.br&porta=20009&codec=mp3&strUser=macaubas&point=/stream&tech=icecastv2&color1=ffb700&color2=ffffff&bgColor=0096ef0a&theme=light&thumbImg=false&statusTxt=false&autoplay=off&facebook=&twitter=&ssl=1&sslp=20009'));
 
   const changeBackground = () => {
     if (window.scrollY >= 120) {
@@ -27,6 +29,15 @@ export default function Header(){
       window.removeEventListener('scroll', changeBackground);
     };
   }, []);
+
+  const handlePlayPause = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
 
   return(
@@ -54,7 +65,7 @@ export default function Header(){
             <Link to="/sobre-nos" className="nav-link">Quem Somos</Link>
           </Nav>
           <Nav>
-            <Nav.Link>Ao Vivo</Nav.Link>
+
             <Nav.Link eventKey={2}>
               Contato
             </Nav.Link>

@@ -18,23 +18,23 @@ import CardsMusicas from "../../Components/Cards_Musicas";
 
 function Home() {
 
-    const [noticias, setNoticias] = useState([]); // Lista de notícias
+    const initialNews = [
+        { title: 'News 1', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
+        { title: 'News 2', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
+        { title: 'News 3', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
+        { title: 'News 4', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
+        { title: 'News 5', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
+        { title: 'News 6', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
+        // Add more news items as needed
+      ];
+
+    const [noticias, setNoticias] = useState(initialNews);
     const [numNoticias, setNumNoticias] = useState(3); // Mostrar 3 notícias inicialmente
 
     const carregarMais = () => {
-        setNumNoticias(numNoticias + 3); // Carregar mais 3 notícias
-    };
-
-    useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-        .then(res => {
-            setNoticias(res.data);
-        })
-        .catch(err => {
-            // Trate aqui qualquer erro que ocorrer
-            console.error(err);
-        })
-    }, []);
+        setNoticias([...noticias, ...noticias.slice(0, numNoticias)]);
+        setNumNoticias(numNoticias + 3);
+      };
 
     const noticiasExibidas = noticias.slice(0, numNoticias);
 
@@ -52,7 +52,7 @@ function Home() {
                             <MDBCard>
                                 <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
                                 <MDBCardImage 
-                                    src='https://mdbootstrap.com/img/new/standard/nature/111.webp' 
+                                    src={noticia.img} 
                                     fluid 
                                     alt='...'
                                 />
@@ -91,29 +91,7 @@ function Home() {
                 </Col>
             </Row>
             <Row className="area-musicas">
-                <Col className="linha-musicas">
-                    <h1 className="titulos-home titulo-musicas">MÚSICAS MAIS TOCADAS</h1>
-                    <Row className="linha-cards-musicas" xs={12} md={8} lg={3}>
-                        <Col className="col-cards-musicas">
-                            <CardsMusicas/>
-                        </Col>
-                        <Col className="col-cards-musicas">
-                            <CardsMusicas/>
-                        </Col>
-                    </Row>
-                    <Row className="linha-cards-musicas" xs={12} md={8} lg={3}>
-                        <Col className="col-cards-musicas">
-                            <CardsMusicas/>
-                        </Col>
-                        <Col className="col-cards-musicas">
-                            <CardsMusicas/>
-                        </Col>
-                        <Col className="col-cards-musicas">
-                            <CardsMusicas/>
-                        </Col>
-                    </Row>
-
-                </Col>
+                <CardsMusicas/>
             </Row>
         </main>
         <Footer/>

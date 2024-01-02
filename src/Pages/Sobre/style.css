@@ -1,0 +1,71 @@
+.conteudo-principal-sobre{
+    padding: 48px 120px 0 120px;
+    text-align: center;
+}
+
+.p-sobre{
+    text-align: justify;
+}
+
+.faixa-azul-sobre{
+    width: 100%;
+    min-height: 180px;
+    background-color: #2F94EF;
+    margin: 48px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 144px 0;
+}
+
+.P-BANNER-SOBRE{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.img-equipe{
+    border-radius: 50%;
+}
+
+.card-equipe-sobre{
+    border: none !important;
+    padding: 0 !important;
+}
+
+.col-cards-sobre{
+    margin-bottom: 44px;
+}
+
+@media (max-width: 575.98px) {
+    .conteudo-principal-sobre{
+        padding: 48px 40px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .conteudo-principal-sobre{
+        padding: 48px 80px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) 
+-Referente a página inicial de navegador, não precisa necessariamente ser estilizada */
+@media (min-width: 1200px) {
+
+}

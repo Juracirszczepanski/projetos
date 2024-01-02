@@ -1,20 +1,31 @@
 .btn-musicas{
-    background-color: #0C356A;
+    color: #0C356A;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 15px;
     padding: 8px 18px 8px;
 }
 
 .btn-musicas:hover{
-    background-color: #2F94EF;
+    color: #2F94EF;
 }
 
-.css-1ndgitk{
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
+.card-body-musicas{
+    padding: 20px 0;
+}
+.card-musicas{
+    width: 250px;
+    box-shadow: 10px 10px 5px rgb(216, 224, 231);
+    border: 0.05px solid rgb(216, 224, 231);
 }
 
-.css-dvxtzn{
-    margin: 8px;
+.card-header-musicas{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.card-title-musicas{
+    font-weight: 600;
+    font-size: 35px;
+    color: #0C356A;
 }
