@@ -5,6 +5,21 @@ import './style.css';
 import Logo from './../../Assets/MACAUBAS-FM-300x102 LOGO.png';
 import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef } from 'react';
+import { 
+  ModalAVozdoBrasil, 
+  ModalAmorSemFim, 
+  ModalAntenaMix, 
+  ModalChapeueViola, 
+  ModalDiretodaRedacao, 
+  ModalFimdeTarde,
+  ModalGuardiaodas7Chaves, 
+  ModalMandeiBem, 
+  ModalManhaInterativa,
+  ModalMaquinadoTempo,
+  ModalMicrofonia, 
+  ModalPaixaoSertaneja, 
+  ModalValeAPenaOuvirDeNovo,
+  ModalNoticias_103 } from "../Modals";
 
 export default function Header(){
 
@@ -40,6 +55,32 @@ export default function Header(){
   };
 
 
+  const [showModal, setShowModal] = useState({
+    ModalNoticias_103: false,
+    ModalAVozdoBrasil: false,
+    ModalAmorSemFim: false,
+    ModalAntenaMix: false,
+    ModalChapeueViola: false,
+    ModalDiretodaRedacao: false,
+    ModalFimdeTarde: false,
+    ModalGuardiaodas7Chaves: false,
+    ModalMandeiBem: false,
+    ModalManhaInterativa: false,
+    ModalMaquinadoTempo: false,
+    ModalMicrofonia: false,
+    ModalPaixaoSertaneja: false,
+    ModalValeAPenaOuvirDeNovo: false
+    
+  });
+ 
+   const abrirModal = (modalName) => {
+     setShowModal({ ...showModal, [modalName]: true });
+   };
+ 
+   const fecharModal = (modalName) => {
+     setShowModal({ ...showModal, [modalName]: false });
+   };
+
   return(
       <Navbar collapseOnSelect expand="lg" className={navbar ? 'Header fixed-top' : 'Header'}>
       <Container>
@@ -51,15 +92,35 @@ export default function Header(){
           <Nav className="me-auto">
             <Link to="/" className="nav-link">Home</Link>
             <NavDropdown title="Programação" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalValeAPenaOuvirDeNovo') }> Vale a Pena Ouvir de Novo </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalChapeueViola') }> Chapéu e Viola </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalPaixaoSertaneja') }> Paixão Sertaneja </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalGuardiaodas7Chaves') }> Guardião das 7 Chaves </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalDiretodaRedacao') }> Direto da Redação </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalMicrofonia') }> Microfonia </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalManhaInterativa') }> Manhã Interativa </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalNoticias_103') }> 103 Notícias </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalMandeiBem') }> Mandei Bem </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalFimdeTarde') }> Fim de Tarde </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalAVozdoBrasil') }> A Voz do Brasil </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalMaquinadoTempo') }> Máquina do Tempo </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalAntenaMix') }> Antena Mix </NavDropdown.Item>
+              <NavDropdown.Item onClick={ () => abrirModal('ModalAmorSemFim') }> Amor Sem Fim </NavDropdown.Item>
+
+              <ModalValeAPenaOuvirDeNovo show={showModal.ModalValeAPenaOuvirDeNovo} handleClose={() => fecharModal('ModalValeAPenaOuvirDeNovo')}/>
+              <ModalChapeueViola show={showModal.ModalChapeueViola} handleClose={() => fecharModal('ModalChapeueViola')}/>
+              <ModalPaixaoSertaneja show={showModal.ModalPaixaoSertaneja} handleClose={() => fecharModal('ModalPaixaoSertaneja')}/>
+              <ModalGuardiaodas7Chaves show={showModal.ModalGuardiaodas7Chaves} handleClose={() => fecharModal('ModalGuardiaodas7Chaves')}/>
+              <ModalDiretodaRedacao show={showModal.ModalDiretodaRedacao} handleClose={() => fecharModal('ModalDiretodaRedacao')}/>
+              <ModalMicrofonia show={showModal.ModalMicrofonia} handleClose={() => fecharModal('ModalMicrofonia')}/>
+              <ModalManhaInterativa show={showModal.ModalManhaInterativa} handleClose={() => fecharModal('ModalManhaInterativa')}/>
+              <ModalNoticias_103 show={showModal.ModalNoticias_103} handleClose={() => fecharModal('ModalNoticias_103')}/>
+              <ModalMandeiBem show={showModal.ModalMandeiBem} handleClose={() => fecharModal('ModalMandeiBem')}/>
+              <ModalFimdeTarde show={showModal.ModalFimdeTarde} handleClose={() => fecharModal('ModalFimdeTarde')}/>
+              <ModalAVozdoBrasil show={showModal.ModalAVozdoBrasil} handleClose={() => fecharModal('ModalAVozdoBrasil')}/>
+              <ModalMaquinadoTempo show={showModal.ModalMaquinadoTempo} handleClose={() => fecharModal('ModalMaquinadoTempo')}/>
+              <ModalAntenaMix show={showModal.ModalAntenaMix} handleClose={() => fecharModal('ModalAntenaMix')}/>
+              <ModalAmorSemFim show={showModal.ModalAmorSemFim} handleClose={() => fecharModal('ModalAmorSemFim')}/>
             </NavDropdown>
             <Nav.Link href="#noticias">Notícias</Nav.Link>
             <Link to="/sobre-nos" className="nav-link">Quem Somos</Link>

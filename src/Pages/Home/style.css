@@ -78,6 +78,13 @@
     align-items: center;
 }
 
+.form-floating>.form-select, .form-floating>.form-control, .form-floating>.form-control-plaintext{
+    border-radius: 10px;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+
 /*Responsividade:*/
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
