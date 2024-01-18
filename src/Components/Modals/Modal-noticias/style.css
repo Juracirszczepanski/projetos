@@ -1,0 +1,30 @@
+.body-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-modal-noticias{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #0C356A;
+    padding: 15px;
+}
+
+.p-noticia-modal{
+    padding: 15px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.btn-noticias-fechar{
+    color: #FFFFFF;
+    background-color: #0C356A;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.btn-noticias-fechar:hover{
+    color: #FFFFFF;
+    background-color: #2F94EF;
+}

@@ -19,7 +19,7 @@ import {
   ModalMicrofonia, 
   ModalPaixaoSertaneja, 
   ModalValeAPenaOuvirDeNovo,
-  ModalNoticias_103 } from "../Modals";
+  ModalNoticias_103 } from "../Modals/Modal-programacao";
 
 export default function Header(){
 

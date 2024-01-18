@@ -47,6 +47,7 @@
     background-color: #0C356A;
     font-weight: 600;
     font-size: 15px;
+    margin: 15px 0;
 }
 
 .btn-noticias:hover{
@@ -82,6 +83,11 @@
     border-radius: 10px;
     margin: 0;
     margin-bottom: 24px;
+}
+
+.noticia-titulo-card{
+    color: #0C356A;
+    font-weight: 600;
 }
 
 

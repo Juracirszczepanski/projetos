@@ -21,8 +21,8 @@ export default function Carousel_equipe() {
             <Card className='card-content' style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                    <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
+                    <MDBBtn className="btn-insta-locutores">
                         <MDBIcon size='lg' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
@@ -32,8 +32,8 @@ export default function Carousel_equipe() {
             <Card className='card-content' style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                    <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
+                    <MDBBtn className="btn-insta-locutores">
                         <MDBIcon size='lg' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
@@ -43,8 +43,8 @@ export default function Carousel_equipe() {
             <Card className='card-content' style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                    <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
+                    <MDBBtn className="btn-insta-locutores">
                         <MDBIcon size='lg' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
@@ -54,8 +54,8 @@ export default function Carousel_equipe() {
             <Card className='card-content' style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                    <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
+                    <MDBBtn className="btn-insta-locutores">
                         <MDBIcon size='lg' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
@@ -65,8 +65,8 @@ export default function Carousel_equipe() {
             <Card className='card-content' style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={Icon_Usuario} className='img-carousel-equipe'/>
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <MDBBtn size='lg' floating style={{ backgroundColor: '#2F94EF' }} href='#'>
+                    <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
+                    <MDBBtn className="btn-insta-locutores">
                         <MDBIcon size='lg' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>

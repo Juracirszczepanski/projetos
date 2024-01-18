@@ -14,24 +14,42 @@ import Carousel_equipe from "../../Components/Carousel_equipe";
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import CardsMusicas from "../../Components/Cards_Musicas";
-import { Label, Select } from 'flowbite-react';
+import NewsModal from "../../Components/Modals/Modal-noticias";
 
 
 function Home() {
 
     const initialNews = [
-        { title: 'News 1', categoria: 'Policial', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
-        { title: 'News 2', categoria: 'Policial', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
-        { title: 'News 3', categoria: 'Policial', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
-        { title: 'News 4', categoria: 'Política', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
-        { title: 'News 5', categoria: 'Política', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
-        { title: 'News 6', categoria: 'Curiosidades', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', body: 'Some quick example text to build on the card title and make up the bulk of the cards content.' },
+        { title: 'News 1', categoria: 'Policial', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', resume: 'Some quick example text to build on the card title and make up the bulk of the cards content.', 
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat hendrerit viverra. Nam et massa turpis. Quisque id tincidunt ligula, sit amet scelerisque arcu. Quisque mollis erat tortor. Sed ultricies pretium arcu, sit amet ultrices nibh porttitor tincidunt. Vivamus facilisis porta massa, eu vehicula diam tempor eget. Donec a lectus sapien. Morbi ut hendrerit lacus, ac vestibulum nunc. In sagittis metus tempor elit ornare, at feugiat sapien porta. Aliquam et magna nec ante cursus egestas. Praesent interdum faucibus tellus in venenatis. Sed sit amet lorem eu leo suscipit luctus sit amet fermentum ipsum. Fusce varius nec neque in ornare. Vestibulum pulvinar placerat nisi ut scelerisque. Etiam fringilla fermentum erat non blandit. Donec rutrum, risus et fermentum blandit, ex turpis congue erat, in tincidunt magna metus vitae lorem. Quisque id molestie enim, non porttitor nisl. Donec eget ipsum bibendum, consequat risus eget, aliquet augue. Quisque bibendum urna tellus, at porta nunc ultricies id. Praesent eget bibendum nisl. Donec interdum nulla nec tellus mollis, congue facilisis neque rhoncus. Proin ac accumsan arcu, ornare rutrum nulla. In facilisis bibendum turpis pharetra luctus. Quisque sed tincidunt dolor. Quisque quis interdum eros, eget aliquet elit. Duis tempus metus felis, vel luctus elit vehicula at. Duis mattis luctus eros condimentum pulvinar. Donec id purus et ante bibendum bibendum. Nullam efficitur nulla non purus rutrum vehicula.' },
+        { title: 'News 2', categoria: 'Policial', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', resume: 'Some quick example text to build on the card title and make up the bulk of the cards content.', 
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat hendrerit viverra. Nam et massa turpis. Quisque id tincidunt ligula, sit amet scelerisque arcu. Quisque mollis erat tortor. Sed ultricies pretium arcu, sit amet ultrices nibh porttitor tincidunt. Vivamus facilisis porta massa, eu vehicula diam tempor eget. Donec a lectus sapien. Morbi ut hendrerit lacus, ac vestibulum nunc. In sagittis metus tempor elit ornare, at feugiat sapien porta. Aliquam et magna nec ante cursus egestas. Praesent interdum faucibus tellus in venenatis. Sed sit amet lorem eu leo suscipit luctus sit amet fermentum ipsum. Fusce varius nec neque in ornare. Vestibulum pulvinar placerat nisi ut scelerisque. Etiam fringilla fermentum erat non blandit. Donec rutrum, risus et fermentum blandit, ex turpis congue erat, in tincidunt magna metus vitae lorem. Quisque id molestie enim, non porttitor nisl. Donec eget ipsum bibendum, consequat risus eget, aliquet augue. Quisque bibendum urna tellus, at porta nunc ultricies id. Praesent eget bibendum nisl. Donec interdum nulla nec tellus mollis, congue facilisis neque rhoncus. Proin ac accumsan arcu, ornare rutrum nulla. In facilisis bibendum turpis pharetra luctus. Quisque sed tincidunt dolor. Quisque quis interdum eros, eget aliquet elit. Duis tempus metus felis, vel luctus elit vehicula at. Duis mattis luctus eros condimentum pulvinar. Donec id purus et ante bibendum bibendum. Nullam efficitur nulla non purus rutrum vehicula.' },
+        { title: 'News 3', categoria: 'Policial', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', resume: 'Some quick example text to build on the card title and make up the bulk of the cards content.', 
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat hendrerit viverra. Nam et massa turpis. Quisque id tincidunt ligula, sit amet scelerisque arcu. Quisque mollis erat tortor. Sed ultricies pretium arcu, sit amet ultrices nibh porttitor tincidunt. Vivamus facilisis porta massa, eu vehicula diam tempor eget. Donec a lectus sapien. Morbi ut hendrerit lacus, ac vestibulum nunc. In sagittis metus tempor elit ornare, at feugiat sapien porta. Aliquam et magna nec ante cursus egestas. Praesent interdum faucibus tellus in venenatis. Sed sit amet lorem eu leo suscipit luctus sit amet fermentum ipsum. Fusce varius nec neque in ornare. Vestibulum pulvinar placerat nisi ut scelerisque. Etiam fringilla fermentum erat non blandit. Donec rutrum, risus et fermentum blandit, ex turpis congue erat, in tincidunt magna metus vitae lorem. Quisque id molestie enim, non porttitor nisl. Donec eget ipsum bibendum, consequat risus eget, aliquet augue. Quisque bibendum urna tellus, at porta nunc ultricies id. Praesent eget bibendum nisl. Donec interdum nulla nec tellus mollis, congue facilisis neque rhoncus. Proin ac accumsan arcu, ornare rutrum nulla. In facilisis bibendum turpis pharetra luctus. Quisque sed tincidunt dolor. Quisque quis interdum eros, eget aliquet elit. Duis tempus metus felis, vel luctus elit vehicula at. Duis mattis luctus eros condimentum pulvinar. Donec id purus et ante bibendum bibendum. Nullam efficitur nulla non purus rutrum vehicula.' },
+        { title: 'News 4', categoria: 'Política', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', resume: 'Some quick example text to build on the card title and make up the bulk of the cards content.', 
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat hendrerit viverra. Nam et massa turpis. Quisque id tincidunt ligula, sit amet scelerisque arcu. Quisque mollis erat tortor. Sed ultricies pretium arcu, sit amet ultrices nibh porttitor tincidunt. Vivamus facilisis porta massa, eu vehicula diam tempor eget. Donec a lectus sapien. Morbi ut hendrerit lacus, ac vestibulum nunc. In sagittis metus tempor elit ornare, at feugiat sapien porta. Aliquam et magna nec ante cursus egestas. Praesent interdum faucibus tellus in venenatis. Sed sit amet lorem eu leo suscipit luctus sit amet fermentum ipsum. Fusce varius nec neque in ornare. Vestibulum pulvinar placerat nisi ut scelerisque. Etiam fringilla fermentum erat non blandit. Donec rutrum, risus et fermentum blandit, ex turpis congue erat, in tincidunt magna metus vitae lorem. Quisque id molestie enim, non porttitor nisl. Donec eget ipsum bibendum, consequat risus eget, aliquet augue. Quisque bibendum urna tellus, at porta nunc ultricies id. Praesent eget bibendum nisl. Donec interdum nulla nec tellus mollis, congue facilisis neque rhoncus. Proin ac accumsan arcu, ornare rutrum nulla. In facilisis bibendum turpis pharetra luctus. Quisque sed tincidunt dolor. Quisque quis interdum eros, eget aliquet elit. Duis tempus metus felis, vel luctus elit vehicula at. Duis mattis luctus eros condimentum pulvinar. Donec id purus et ante bibendum bibendum. Nullam efficitur nulla non purus rutrum vehicula.' },
+        { title: 'News 5', categoria: 'Política', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', resume: 'Some quick example text to build on the card title and make up the bulk of the cards content.', 
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat hendrerit viverra. Nam et massa turpis. Quisque id tincidunt ligula, sit amet scelerisque arcu. Quisque mollis erat tortor. Sed ultricies pretium arcu, sit amet ultrices nibh porttitor tincidunt. Vivamus facilisis porta massa, eu vehicula diam tempor eget. Donec a lectus sapien. Morbi ut hendrerit lacus, ac vestibulum nunc. In sagittis metus tempor elit ornare, at feugiat sapien porta. Aliquam et magna nec ante cursus egestas. Praesent interdum faucibus tellus in venenatis. Sed sit amet lorem eu leo suscipit luctus sit amet fermentum ipsum. Fusce varius nec neque in ornare. Vestibulum pulvinar placerat nisi ut scelerisque. Etiam fringilla fermentum erat non blandit. Donec rutrum, risus et fermentum blandit, ex turpis congue erat, in tincidunt magna metus vitae lorem. Quisque id molestie enim, non porttitor nisl. Donec eget ipsum bibendum, consequat risus eget, aliquet augue. Quisque bibendum urna tellus, at porta nunc ultricies id. Praesent eget bibendum nisl. Donec interdum nulla nec tellus mollis, congue facilisis neque rhoncus. Proin ac accumsan arcu, ornare rutrum nulla. In facilisis bibendum turpis pharetra luctus. Quisque sed tincidunt dolor. Quisque quis interdum eros, eget aliquet elit. Duis tempus metus felis, vel luctus elit vehicula at. Duis mattis luctus eros condimentum pulvinar. Donec id purus et ante bibendum bibendum. Nullam efficitur nulla non purus rutrum vehicula.' },
+        { title: 'News 6', categoria: 'Curiosidades', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', resume: 'Some quick example text to build on the card title and make up the bulk of the cards content.', 
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat hendrerit viverra. Nam et massa turpis. Quisque id tincidunt ligula, sit amet scelerisque arcu. Quisque mollis erat tortor. Sed ultricies pretium arcu, sit amet ultrices nibh porttitor tincidunt. Vivamus facilisis porta massa, eu vehicula diam tempor eget. Donec a lectus sapien. Morbi ut hendrerit lacus, ac vestibulum nunc. In sagittis metus tempor elit ornare, at feugiat sapien porta. Aliquam et magna nec ante cursus egestas. Praesent interdum faucibus tellus in venenatis. Sed sit amet lorem eu leo suscipit luctus sit amet fermentum ipsum. Fusce varius nec neque in ornare. Vestibulum pulvinar placerat nisi ut scelerisque. Etiam fringilla fermentum erat non blandit. Donec rutrum, risus et fermentum blandit, ex turpis congue erat, in tincidunt magna metus vitae lorem. Quisque id molestie enim, non porttitor nisl. Donec eget ipsum bibendum, consequat risus eget, aliquet augue. Quisque bibendum urna tellus, at porta nunc ultricies id. Praesent eget bibendum nisl. Donec interdum nulla nec tellus mollis, congue facilisis neque rhoncus. Proin ac accumsan arcu, ornare rutrum nulla. In facilisis bibendum turpis pharetra luctus. Quisque sed tincidunt dolor. Quisque quis interdum eros, eget aliquet elit. Duis tempus metus felis, vel luctus elit vehicula at. Duis mattis luctus eros condimentum pulvinar. Donec id purus et ante bibendum bibendum. Nullam efficitur nulla non purus rutrum vehicula.' },
         // Add more news items as needed
       ];
 
       const [noticias, setNoticias] = useState(initialNews);
       const [numNoticias, setNumNoticias] = useState(3); 
       const [pesquisa, setPesquisa] = useState('');
+
+      const [showModal, setShowModal] = useState(false);
+      const [selectedNews, setSelectedNews] = useState({});
+    
+      const modalOpen = (noticia) => {
+        setSelectedNews(noticia);
+        setShowModal(true);
+      };
+    
+      const modalClose = () => {
+        setShowModal(false);
+      };
       
       useEffect(() => {
           if (pesquisa) {
@@ -92,15 +110,16 @@ function Home() {
                                 </a>
                                 </MDBRipple>
                                 <MDBCardBody>
-                                <MDBCardTitle>{noticia.title}</MDBCardTitle>
+                                <MDBCardTitle className="noticia-titulo-card">{noticia.title}</MDBCardTitle>
                                 <MDBCardText>
-                                    {noticia.body}
+                                    {noticia.resume}
                                 </MDBCardText>
-                                <MDBBtn href='#' className="btn-noticia">Button</MDBBtn>
+                                <MDBBtn onClick={() => modalOpen(noticia)} className="btn-noticia">Ler Mais</MDBBtn>
                                 </MDBCardBody>
                             </MDBCard>
                         </Col>
                         ))}
+                        <NewsModal show={showModal} onHide={modalClose} noticia={selectedNews} />
                     </Row>
                     <MDBBtn className="btn-noticias" onClick={carregarMais}>Carregar mais</MDBBtn>
                 </Col>
