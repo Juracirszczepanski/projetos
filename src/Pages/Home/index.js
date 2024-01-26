@@ -82,17 +82,6 @@ function Home() {
                                     <option value="Curiosidades">Curiosidades</option>
                                 </Form.Select>
                             </FloatingLabel>
-                            
-                            <Form.Floating className="mb-3">
-                                <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Categoria"
-                                value={pesquisa}
-                                onChange={(e) => setPesquisa(e.target.value)}
-                                />
-                                <label htmlFor="floatingInputCustom">Filtrar Notícias</label>
-                            </Form.Floating>
                         </Col>
                     </Row>
                     <Row>
@@ -124,12 +113,12 @@ function Home() {
                     <MDBBtn className="btn-noticias" onClick={carregarMais}>Carregar mais</MDBBtn>
                 </Col>
             </Row>
-            <Row className="banner-patrocidadores">
+            {/* <Row className="banner-patrocidadores">
                 <Col>
                     <img className="img-banner-patroc" src={banner_patrocidadores}/>
                 </Col>
-            </Row>
-            <Row>
+            </Row> */}
+            <Row className="area-locutores">
                 <Col>
                     <h1 className="titulos-home">CONHEÇA NOSSOS LOCUTORES</h1>
                     <Carousel_equipe/>

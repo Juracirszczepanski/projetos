@@ -1,0 +1,15 @@
+.area-patricinadores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-patrocinadores{
+    margin: 24px;
+    width: 150px;
+}
+
+.css-ta95xa-MuiImageListItem-root .MuiImageListItem-img{
+    border-radius: 8px;
+}

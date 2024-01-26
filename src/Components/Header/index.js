@@ -124,9 +124,9 @@ export default function Header(){
             </NavDropdown>
             <Nav.Link href="#noticias">Notícias</Nav.Link>
             <Link to="/sobre-nos" className="nav-link">Quem Somos</Link>
+            <Link to="/patrocinadores" className="nav-link">Patrocidadores</Link>
           </Nav>
           <Nav>
-
             <Nav.Link eventKey={2}>
               Contato
             </Nav.Link>

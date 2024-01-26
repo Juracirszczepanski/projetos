@@ -47,12 +47,18 @@
     background-color: #0C356A;
     font-weight: 600;
     font-size: 15px;
-    margin: 15px 0;
+    margin-top: 32px;
+    margin-bottom: 15px;
 }
 
 .btn-noticias:hover{
     color: #FFFFFF;
     background-color: #2F94EF;
+}
+
+.area-locutores{
+    margin-top: 120px;
+    margin-bottom: 48px;
 }
 
 .area-musicas{
