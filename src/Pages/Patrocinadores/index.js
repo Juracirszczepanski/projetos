@@ -1,18 +1,25 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "../../Components/Header/index";
 import Footer from "../../Components/Footer";
 import './../../style.css'
 import './style.css';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 
 
 function Patrocidadores() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+     setTimeout(() => {
+       setIsLoading(false);
+     }, 3000); // 3000 milissegundos = 3 segundos
+  }, []);
 
     const itemData = [
         {
@@ -89,39 +96,53 @@ function Patrocidadores() {
           patrocinador: 'Bike',
           cols: 2,
         },
+        {
+          img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+          patrocinador: 'Mushrooms',
+          rows: 2,
+          cols: 2,
+        },
+        {
+          img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+          patrocinador: 'Mushrooms',
+          rows: 2,
+          cols: 2,
+        },
+        {
+          img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+          patrocinador: 'Mushrooms',
+          rows: 2,
+          cols: 2,
+        },
       ];
 
   return (
-    <Container fluid>
-        <Header id='top'/>
-        <main className="conteudo-principal-sobre">
-          <Row>
-            <Col>            
-              <h1 className="titulos-home">CONHEÇA NOSSOS PATROCINADORES</h1>
-            </Col>
-          </Row>
-          <Row>
-          <Col className="area-patricinadores">
-                <ImageList cols={5} >
-                {itemData.map((item) => (
-                    <ImageListItem className="img-patrocinadores" key={item.img}>
-                    <img
-                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                        alt={item.patrocinador}
-                        loading="lazy"
-                    />
-                    <ImageListItemBar 
-                        title={item.patrocinador}
-                    />
-                    </ImageListItem>
-                ))}
-                </ImageList>
-            </Col>
-          </Row>
-        </main>
-        <Footer/>
-    </Container>
+    <div>
+        {isLoading ? (
+        <p className="titulos-home">Carregando...</p>
+      ) : (
+        <Container fluid>
+            <Header id='top'/>
+            <main className="conteudo-principal-sobre">
+              <Row>
+                <Col>            
+                  <h1 className="titulos-home">CONHEÇA NOSSOS PATROCINADORES</h1>
+                </Col>
+              </Row>
+              <Row>
+
+                    {itemData.map((item) => (
+                        <Col xs={12} sm={6} md={4} lg={2}  key={item.img}>
+                          <Image className='img-patrocinador' src={item.img}/>
+                        </Col>
+                      ))}
+
+              </Row>
+            </main>
+            <Footer/>
+        </Container>
+      )}
+    </div>
   );
 }
 

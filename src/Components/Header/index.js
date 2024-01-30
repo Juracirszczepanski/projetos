@@ -127,7 +127,10 @@ export default function Header(){
             <Link to="/patrocinadores" className="nav-link">Patrocidadores</Link>
           </Nav>
           <Nav>
-            <Nav.Link eventKey={2}>
+            {/* <Nav.Link eventKey={2} href='' target='_blank'> Area onde o botao de tocar iria ficar
+              Ao Vivo
+            </Nav.Link> */}
+            <Nav.Link eventKey={2} href='' target='_blank'>
               Contato
             </Nav.Link>
             <Nav.Link href='#top' eventKey={2} className={showArrow ? "icon-top show" : "icon-top"}>

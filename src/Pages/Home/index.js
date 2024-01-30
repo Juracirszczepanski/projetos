@@ -1,23 +1,29 @@
-import { Col, Container, FloatingLabel, Form, ListGroup, Row } from "react-bootstrap";
+import { Col, Container, FloatingLabel, Form, Row } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Link } from "react-router-dom";
 import Header from "../../Components/Header/index";
 import Carousels from "../../Components/Carousel";
 import Footer from "../../Components/Footer";
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple } from 'mdb-react-ui-kit';
 import './../../style.css'
 import './style.css';
-import banner_patrocidadores from './../../Assets/IA_Bannersite_patrocinadores-02_1920x100_-2023.jpg';
 import Carousel_equipe from "../../Components/Carousel_equipe";
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
 import CardsMusicas from "../../Components/Cards_Musicas";
 import NewsModal from "../../Components/Modals/Modal-noticias";
 
 
 function Home() {
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+       setTimeout(() => {
+         setIsLoading(false);
+       }, 3000); // 3000 milissegundos = 3 segundos
+    }, []);
+
 
     const initialNews = [
         { title: 'News 1', categoria: 'Policial', img: 'https://mdbootstrap.com/img/new/standard/nature/111.webp', resume: 'Some quick example text to build on the card title and make up the bulk of the cards content.', 
@@ -65,76 +71,77 @@ function Home() {
       };
 
   return (
-    <Container fluid>
-        <Header id='top'/>
-        <Carousels/>
-        <main className="conteudo-principal-home">
-            <Row id="noticias">
-                <Col>
-                    <h1 className="titulos-home">NOTÍCIAS</h1>
-                    <Row>
-                        <Col>
-                            <FloatingLabel controlId="floatingSelect" label="Filtrar Notícias">
-                                <Form.Select aria-label="Floating label select example" onChange={(e) => setPesquisa(e.target.value)}>
-                                    <option value="">Categoria</option>
-                                    <option value="Policial">Policial</option>
-                                    <option value="Política">Política</option>
-                                    <option value="Curiosidades">Curiosidades</option>
-                                </Form.Select>
-                            </FloatingLabel>
-                        </Col>
-                    </Row>
-                    <Row>
-                    {noticias.map((noticia, index) => (
-                        <Col xs={12} md={6} lg={4} key={index}  className="linha-noticias">
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                <MDBCardImage 
-                                    src={noticia.img} 
-                                    fluid 
-                                    alt='...'
-                                />
-                                <a>
-                                    <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                <MDBCardTitle className="noticia-titulo-card">{noticia.title}</MDBCardTitle>
-                                <MDBCardText>
-                                    {noticia.resume}
-                                </MDBCardText>
-                                <MDBBtn onClick={() => modalOpen(noticia)} className="btn-noticia">Ler Mais</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </Col>
-                        ))}
-                        <NewsModal show={showModal} onHide={modalClose} noticia={selectedNews} />
-                    </Row>
-                    <MDBBtn className="btn-noticias" onClick={carregarMais}>Carregar mais</MDBBtn>
-                </Col>
-            </Row>
-            {/* <Row className="banner-patrocidadores">
-                <Col>
-                    <img className="img-banner-patroc" src={banner_patrocidadores}/>
-                </Col>
-            </Row> */}
-            <Row className="area-locutores">
-                <Col>
-                    <h1 className="titulos-home">CONHEÇA NOSSOS LOCUTORES</h1>
-                    <Carousel_equipe/>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <div className="faixa-azul"/>
-                </Col>
-            </Row>
-            <Row className="area-musicas">
-                <CardsMusicas/>
-            </Row>
-        </main>
-        <Footer/>
-    </Container>
+    <div>
+        {isLoading ? (
+        <p className="titulos-home">Carregando...</p>
+      ) : (
+        <Container fluid>
+            <Header id='top'/>
+            <Carousels/>
+            <main className="conteudo-principal-home">
+                <Row id="noticias">
+                    <Col>
+                        <h1 className="titulos-home">NOTÍCIAS</h1>
+                        <Row>
+                            <Col>
+                                <FloatingLabel controlId="floatingSelect" label="Filtrar Notícias">
+                                    <Form.Select aria-label="Floating label select example" onChange={(e) => setPesquisa(e.target.value)}>
+                                        <option value="">Categoria</option>
+                                        <option value="Policial">Policial</option>
+                                        <option value="Política">Política</option>
+                                        <option value="Curiosidades">Curiosidades</option>
+                                    </Form.Select>
+                                </FloatingLabel>
+                            </Col>
+                        </Row>
+                        <Row>
+                        {noticias.map((noticia, index) => (
+                            <Col xs={12} md={6} lg={4} key={index}  className="linha-noticias">
+                                <MDBCard>
+                                    <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                                    <MDBCardImage 
+                                        src={noticia.img} 
+                                        fluid 
+                                        alt='...'
+                                    />
+                                    <a>
+                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                                    </a>
+                                    </MDBRipple>
+                                    <MDBCardBody>
+                                    <MDBCardTitle className="noticia-titulo-card">{noticia.title}</MDBCardTitle>
+                                    <MDBCardText>
+                                        {noticia.resume}
+                                    </MDBCardText>
+                                    <MDBBtn onClick={() => modalOpen(noticia)} className="btn-noticia">Ler Mais</MDBBtn>
+                                    </MDBCardBody>
+                                </MDBCard>
+                            </Col>
+                            ))}
+                            <NewsModal show={showModal} onHide={modalClose} noticia={selectedNews} />
+                        </Row>
+                        <MDBBtn className="btn-noticias" onClick={carregarMais}>Carregar mais</MDBBtn>
+                    </Col>
+                </Row>
+                <Row className="area-locutores">
+                    <Col>
+                        <h1 className="titulos-home">CONHEÇA NOSSOS LOCUTORES</h1>
+                        <Carousel_equipe/>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="faixa-azul"/>
+                    </Col>
+                </Row>
+                <Row className="area-musicas">
+                    <CardsMusicas/>
+                </Row>
+            </main>
+            <Footer/>
+        </Container>
+      )}
+    </div>
   );
 }
 

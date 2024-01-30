@@ -16,30 +16,35 @@ export default function CardsMusicas() {
        title: 'Music Name',
        singer: 'Singer',
        imageURL: 'https://mdbootstrap.com/img/new/standard/nature/111.webp',
-    },
+      linkMusica: '',
+      },
     {
       rank: '2',
       title: 'Music Name',
       singer: 'Singer',
       imageURL: 'https://mdbootstrap.com/img/new/standard/nature/111.webp',
-   },
+      linkMusica: '',
+    },
    {
       rank: '3',
       title: 'Music Name',
       singer: 'Singer',
       imageURL: 'https://mdbootstrap.com/img/new/standard/nature/111.webp',
+      linkMusica: '',
     },
     {
       rank: '4',
       title: 'Music Name',
       singer: 'Singer',
       imageURL: 'https://mdbootstrap.com/img/new/standard/nature/111.webp',
+      linkMusica: '',
     },
     {
       rank: '5',
       title: 'Music Name',
       singer: 'Singer',
       imageURL: 'https://mdbootstrap.com/img/new/standard/nature/111.webp',
+      linkMusica: '',
     },
    ];
 
@@ -61,10 +66,10 @@ export default function CardsMusicas() {
               <MDBCardImage src={music.imageURL} fluid alt='...' width={200}/>
             </MDBCardBody>
             <MDBCardFooter>
-              <Link className='btn-musicas' aria-label="play/pause">
+              <a className='btn-musicas' aria-label="play/pause" href={music.linkMusica} target='_blank'>
                  <PlayArrowIcon sx={{ height: 36, width: 36 }} />
                     Ouça Agora
-              </Link>
+              </a>
             </MDBCardFooter>
           </MDBCard>
         </Col>

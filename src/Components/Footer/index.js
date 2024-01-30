@@ -33,10 +33,10 @@ export default function Footer(){
                     </MDBCol>
                     <MDBCol md="4" lg="3" xl="3" className='logo-footer mx-auto'>
                         <h6 className='text-uppercase fw-bold mb-4'>Baixe Nosso App</h6>
-                        <a href='#!' className='text-reset mb-4'>
+                        <a href='' target='_blank' className='text-reset mb-4'>
                             <img src={Logo_playStore} width={160}/>
                         </a>
-                        <a href='#!' className='text-reset mb-4'>
+                        <a href='' target='_blank' className='text-reset mb-4'>
                             <img src={Logo_AppStore} width={160}/>
                         </a>
                     </MDBCol>
@@ -50,18 +50,17 @@ export default function Footer(){
                 </p>
             </div>
             <div className='text-center p-4'>
-                <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+                <MDBBtn outline color="light" floating className='m-1' href='' target='_blank' role='button'>
                     <MDBIcon fab icon='facebook-f' />
                 </MDBBtn>
-
-                <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+                <MDBBtn outline color="light" floating className='m-1' href='' target='_blank' role='button'>
                     <MDBIcon fab icon='twitter' />
                 </MDBBtn>
 
-                <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+                <MDBBtn outline color="light" floating className='m-1' href='' target='_blank' role='button'>
                     <MDBIcon fab icon='google' />
                 </MDBBtn>
-                <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+                <MDBBtn outline color="light" floating className='m-1' href='' target='_blank' role='button'>
                     <MDBIcon fab icon='instagram' />
                 </MDBBtn>
             </div>

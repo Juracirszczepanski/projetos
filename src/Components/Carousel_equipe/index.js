@@ -23,7 +23,7 @@ export default function Carousel_equipe() {
                 <Card.Body>
                     <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
                     <MDBBtn className="btn-insta-locutores">
-                        <MDBIcon size='lg' fab icon='instagram' />
+                        <MDBIcon size='lg' href='' target='_blank' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
             </Card>
@@ -34,7 +34,7 @@ export default function Carousel_equipe() {
                 <Card.Body>
                     <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
                     <MDBBtn className="btn-insta-locutores">
-                        <MDBIcon size='lg' fab icon='instagram' />
+                        <MDBIcon size='lg' href='' target='_blank' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
             </Card>
@@ -45,7 +45,7 @@ export default function Carousel_equipe() {
                 <Card.Body>
                     <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
                     <MDBBtn className="btn-insta-locutores">
-                        <MDBIcon size='lg' fab icon='instagram' />
+                        <MDBIcon size='lg' href='' target='_blank' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
             </Card>
@@ -56,7 +56,7 @@ export default function Carousel_equipe() {
                 <Card.Body>
                     <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
                     <MDBBtn className="btn-insta-locutores">
-                        <MDBIcon size='lg' fab icon='instagram' />
+                        <MDBIcon size='lg' href='' target='_blank' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
             </Card>
@@ -67,7 +67,7 @@ export default function Carousel_equipe() {
                 <Card.Body>
                     <Card.Title className="card-titulo-equipe">Card Title</Card.Title>
                     <MDBBtn className="btn-insta-locutores">
-                        <MDBIcon size='lg' fab icon='instagram' />
+                        <MDBIcon size='lg' href='' target='_blank' fab icon='instagram' />
                     </MDBBtn>
                 </Card.Body>
             </Card>

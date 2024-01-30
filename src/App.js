@@ -1,4 +1,3 @@
-import './App.css';
 import RoutesApp from './Routes/routes';
 import { BrowserRouter } from 'react-router-dom';
 

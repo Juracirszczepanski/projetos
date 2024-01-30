@@ -3,15 +3,6 @@
     text-align: center;
 }
 
-.banner-patrocidadores{
-    padding: 144px 0;
-}
-
-.img-banner-patroc{
-    width: 100%;
-
-}
-
 .faixa-azul{
     width: 100%;
     min-height: 80px;
@@ -118,20 +109,4 @@
     .titulos-home{
         font-size: 35px;
     }
-}
-
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-}
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) 
--Referente a página inicial de navegador, não precisa necessariamente ser estilizada */
-@media (min-width: 1200px) {
-
 }

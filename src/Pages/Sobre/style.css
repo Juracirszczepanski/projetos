@@ -45,6 +45,13 @@
         padding: 48px 40px;
     }
 
+    .img-faixa{
+        height: 100px;
+    }
+
+    .P-BANNER-SOBRE{
+        font-size: 15px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -52,20 +59,12 @@
     .conteudo-principal-sobre{
         padding: 48px 80px;
     }
-}
 
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
+    .img-faixa{
+        height: 100px;
+    }
 
-}
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) 
--Referente a página inicial de navegador, não precisa necessariamente ser estilizada */
-@media (min-width: 1200px) {
-
+    .P-BANNER-SOBRE{
+        font-size: 15px;
+    }
 }
