@@ -5,7 +5,6 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn } from 'mdb-re
 import Logo from './../../Assets/MACAUBAS-FM-300x102 LOGO.png';
 import Logo_playStore from './../../Assets/ANDROID.png';
 import Logo_AppStore from './../../Assets/IOS.png';
-import { Link } from "react-router-dom";
 import React from 'react';
 
 export default function Footer(){

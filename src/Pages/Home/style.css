@@ -17,6 +17,12 @@
     padding-bottom: 48px;
 }
 
+.titulo-carregando{
+    color: #2F94EF;
+    font-size: 24px;
+    font-weight:bold;
+}
+
 .linha-noticias{
     margin-bottom: 20px;
 }

@@ -73,7 +73,7 @@ function Home() {
   return (
     <div>
         {isLoading ? (
-        <p className="titulos-home">Carregando...</p>
+        <p className="titulo-carregando">Carregando...</p>
       ) : (
         <Container fluid>
             <Header id='top'/>

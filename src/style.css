@@ -8,9 +8,6 @@
 
 .row{
     margin: 0;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .container-fluid{
@@ -20,3 +17,7 @@
     --mdb-gutter-x: 0 !important;
 }
 
+.col{
+    margin: 0;
+    padding: 0;
+}

@@ -1,44 +1,10 @@
+.area-img-patrocinadores{
+    padding: 12px;
+}
+
 .img-patrocinador{
     border-radius: 8px;
-    margin: 20px 0;
+    width: 100%;
+    height:100%;
 } 
 
-@media (max-width: 575.98px) {
-    .img-patrocinador{
-        width: 230px;
-        height: 230px;
-    }
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .img-patrocinador{
-        width: 220px;
-        height: 220px;
-    }
-}
-
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .img-patrocinador{
-        width: 150px;
-        height: 150px;
-    }
-}
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .img-patrocinador{
-        width: 100px;
-        height: 100px;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) 
--Referente a página inicial de navegador, não precisa necessariamente ser estilizada */
-@media (min-width: 1200px) {
-    .img-patrocinador{
-        width: 100px;
-        height: 100px;
-    }
-}
