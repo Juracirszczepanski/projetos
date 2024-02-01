@@ -131,7 +131,7 @@ export default function Header(){
               Ao Vivo
             </Nav.Link> */}
             <Nav.Link eventKey={2} href='' target='_blank'>
-              Contato
+              <Link to="/contato" className="nav-link">Contato</Link>
             </Nav.Link>
             <Nav.Link href='#top' eventKey={2} className={showArrow ? "icon-top show" : "icon-top"}>
               <i class="fas fa-angles-up icone-arrow"></i>

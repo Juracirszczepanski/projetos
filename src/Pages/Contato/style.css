@@ -1,0 +1,107 @@
+.area-entraremcontato{
+    width: 100%;
+    min-height: 450px;
+    background-color: #F7F7F7; 
+    box-shadow: 9px 10px 21px -4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 9px 10px 21px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 9px 10px 21px -4px rgba(0,0,0,0.5);
+}
+
+.col-mapa{
+    padding: 0%;
+}
+
+.area-contato-itens{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col-contato-itens{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.col-contato-itens p{
+    margin: 0;
+    padding-left: 12px;
+    font-size: 16px;
+}
+
+.titulos-contato{
+    color: #2F94EF;
+    font-size: 40px;
+    font-weight:bold;
+    padding-bottom: 48px;
+}
+
+.p-faixa{
+    color: #2F94EF;
+    margin: 0%;
+    padding-right: 12px;
+    font-weight: 600;
+}
+
+.icons-app{
+    margin: 6px;
+}
+
+.iframe-maps{
+    width: 100%;
+    height: 100%;
+    border: none;
+    
+}
+
+
+@media (max-width: 575.98px) {
+    .p-faixa{
+        font-size: 8px;
+    }
+    .col-contato-itens p{
+        font-size: 14px;
+    }
+
+    .icon-contato{
+        width: 35px;
+        height: 35px;
+    }
+
+    .logos-contato{
+        width: 80px;
+    }
+    .icons-redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .p-faixa{
+        font-size: 12px;
+    }
+    .col-contato-itens p{
+        font-size: 14;
+    }
+
+    .icon-contato{
+        width: 45px;
+        height: 45px;
+    }
+
+    .logos-contato{
+        width: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992.98px) {
+
+}
