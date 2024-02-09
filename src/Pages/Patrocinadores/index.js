@@ -113,7 +113,7 @@ function Patrocidadores() {
 
                     {itemData.map((item) => (
                         <Col className='area-img-patrocinadores' xs={12} sm={6} md={4} lg={2}  key={item.img}>
-                          <img className='img-patrocinador' src={item.img}/>
+                          <img className='img-patrocinador' src={item.img} loading='lazy'/>
                         </Col>
                       ))}
 

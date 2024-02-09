@@ -24,7 +24,7 @@ export default function Footer(){
                     </p>
                     <p>
                         <MDBIcon icon="envelope" className="me-3" />
-                        info@example.com
+                        macaubasfmproducao@hotmail.com
                     </p>
                     <p>
                         <MDBIcon icon="phone" className="me-3" /> +55 (77) 3473-2589
@@ -32,10 +32,10 @@ export default function Footer(){
                     </MDBCol>
                     <MDBCol md="4" lg="3" xl="3" className='logo-footer mx-auto'>
                         <h6 className='text-uppercase fw-bold mb-4'>Baixe Nosso App</h6>
-                        <a href='' target='_blank' className='text-reset mb-4'>
+                        <a href='https://play.google.com/store/apps/details?id=hoostcomv2.macaubas' target='_blank' className='text-reset mb-4'>
                             <img src={Logo_playStore} width={160}/>
                         </a>
-                        <a href='' target='_blank' className='text-reset mb-4'>
+                        <a href='https://apps.apple.com/br/app/r%C3%A1dio-maca%C3%BAbas-fm/id1482288445' target='_blank' className='text-reset mb-4'>
                             <img src={Logo_AppStore} width={160}/>
                         </a>
                     </MDBCol>
@@ -49,18 +49,14 @@ export default function Footer(){
                 </p>
             </div>
             <div className='text-center p-4'>
-                <MDBBtn outline color="light" floating className='m-1' href='' target='_blank' role='button'>
-                    <MDBIcon fab icon='facebook-f' />
+                <MDBBtn outline color="light" floating className='m-2' href='https://www.youtube.com/@macaubasfmoficial1636' target='_blank' role='button'>
+                    <MDBIcon fab icon='youtube' />
                 </MDBBtn>
-                <MDBBtn outline color="light" floating className='m-1' href='' target='_blank' role='button'>
-                    <MDBIcon fab icon='twitter' />
-                </MDBBtn>
-
-                <MDBBtn outline color="light" floating className='m-1' href='' target='_blank' role='button'>
-                    <MDBIcon fab icon='google' />
-                </MDBBtn>
-                <MDBBtn outline color="light" floating className='m-1' href='' target='_blank' role='button'>
+                <MDBBtn outline color="light" floating className='m-2' href='https://www.instagram.com/macaubasfmoficial/' target='_blank' role='button'>
                     <MDBIcon fab icon='instagram' />
+                </MDBBtn>
+                <MDBBtn outline color="light" floating className='m-2' href='https://wa.me/message/74Z3AQ7EJKTSG1' target='_blank' role='button'>
+                    <MDBIcon fab icon='whatsapp' />
                 </MDBBtn>
             </div>
         </section>

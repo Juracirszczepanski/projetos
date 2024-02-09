@@ -87,9 +87,11 @@ function Home() {
                                 <FloatingLabel controlId="floatingSelect" label="Filtrar Notícias">
                                     <Form.Select aria-label="Floating label select example" onChange={(e) => setPesquisa(e.target.value)}>
                                         <option value="">Categoria</option>
-                                        <option value="Policial">Policial</option>
-                                        <option value="Política">Política</option>
-                                        <option value="Curiosidades">Curiosidades</option>
+                                        <option value="Gerais">Gerais</option>
+                                        <option value="Esportivas">Esportivas</option>
+                                        <option value="Celebridade">Celebridade</option>
+                                        <option value="Policiais">Policiais</option>
+                                        <option value="Cultural">Cultural</option>
                                     </Form.Select>
                                 </FloatingLabel>
                             </Col>

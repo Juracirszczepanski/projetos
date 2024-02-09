@@ -1,4 +1,4 @@
-import { Col, Container, Image, ListGroup, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -11,7 +11,12 @@ import { Card } from 'flowbite-react';
 import { useState } from "react";
 import { useEffect } from "react";
 
-
+import AdrianaSantos from './../../Assets/Fotos Equipe/Adriana Santos.jpg';
+import AnaDultra from './../../Assets/Fotos Equipe/Ana Clara Dultra.jpg';
+import FelipeFrancisco from './../../Assets/Fotos Equipe/Felipe Francisco.jpg';
+import RaiHenrique from './../../Assets/Fotos Equipe/Raí Henrique.jpg';
+import TatiDomingues from './../../Assets/Fotos Equipe/Tati Domingues.jpg';
+import NaliPereira from  './../../Assets/Fotos Equipe/Nali Pereira.jpg'
 
 function Sobre() {
 
@@ -52,19 +57,18 @@ function Sobre() {
             <Row>
               <Col>            
                 <h1 className="titulos-home">Nossa Equipe</h1>
-                <Row md={10}>
+                <Row lg={12}>
                   <Col className="col-cards-sobre">
                     <Card className="max-w-sm card-equipe-sobre">
                       <div className="flex flex-col items-center pb-10">
                         <Image
                           alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
+                          src={NaliPereira}
+                          width="100"
                           className="img-equipe"
                         />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Nali Pereira</h5>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">Gerência</span>
                       </div>
                     </Card>
                   </Col>
@@ -73,13 +77,12 @@ function Sobre() {
                       <div className="flex flex-col items-center pb-10">
                         <Image
                           alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
+                          src={AdrianaSantos}
+                          width="100"
                           className="img-equipe"
                         />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Adriana Santos</h5>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">Locutora</span>
                       </div>
                     </Card>
                   </Col>
@@ -88,60 +91,28 @@ function Sobre() {
                       <div className="flex flex-col items-center pb-10">
                         <Image
                           alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
+                          src={AnaDultra}
+                          width="100"
                           className="img-equipe"
                         />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                      </div>
-                    </Card>
-                  </Col>
-                  <Col className="col-cards-sobre">
-                    <Card className="max-w-sm card-equipe-sobre">
-                      <div className="flex flex-col items-center pb-10">
-                        <Image
-                          alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
-                          className="img-equipe"
-                        />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                      </div>
-                    </Card>
-                  </Col>
-                  <Col className="col-cards-sobre">
-                    <Card className="max-w-sm card-equipe-sobre">
-                      <div className="flex flex-col items-center pb-10">
-                        <Image
-                          alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
-                          className="img-equipe"
-                        />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ana Clara Dultra</h5>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">Locutora</span>
                       </div>
                     </Card>
                   </Col>
                 </Row>
-                <Row md={10}>
+                <Row lg={12}>
                   <Col className="col-cards-sobre">
                     <Card className="max-w-sm card-equipe-sobre">
                       <div className="flex flex-col items-center pb-10">
                         <Image
                           alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
+                          src={FelipeFrancisco}
+                          width="100"
                           className="img-equipe"
                         />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Felipe Francisco</h5>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">Locutor</span>
                       </div>
                     </Card>
                   </Col>
@@ -150,13 +121,12 @@ function Sobre() {
                       <div className="flex flex-col items-center pb-10">
                         <Image
                           alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
+                          src={RaiHenrique}
+                          width="100"
                           className="img-equipe"
                         />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Raí Henrique</h5>
+                        <span className="text-sm text-gray-500 dark:text-gray-400 locutor">Locutor - Bacharel em Comunicação Social Rádio e TV</span>
                       </div>
                     </Card>
                   </Col>
@@ -165,43 +135,12 @@ function Sobre() {
                       <div className="flex flex-col items-center pb-10">
                         <Image
                           alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
+                          src={TatiDomingues}
+                          width="100"
                           className="img-equipe"
                         />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                      </div>
-                    </Card>
-                  </Col>
-                  <Col className="col-cards-sobre">
-                    <Card className="max-w-sm card-equipe-sobre">
-                      <div className="flex flex-col items-center pb-10">
-                        <Image
-                          alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
-                          className="img-equipe"
-                        />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                      </div>
-                    </Card>
-                  </Col>
-                  <Col className="col-cards-sobre">
-                    <Card className="max-w-sm card-equipe-sobre">
-                      <div className="flex flex-col items-center pb-10">
-                        <Image
-                          alt="Bonnie image"
-                          height="96"
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                          width="96"
-                          className="img-equipe"
-                        />
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Tati Domingues</h5>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">Locutora</span>
                       </div>
                     </Card>
                   </Col>

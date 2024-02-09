@@ -27,7 +27,8 @@
 }
 
 .img-equipe{
-    border-radius: 50%;
+    border-radius: 10%;
+    margin-bottom: 12px;
 }
 
 .card-equipe-sobre{
@@ -37,6 +38,10 @@
 
 .col-cards-sobre{
     margin-bottom: 44px;
+}
+
+.locutor{
+    max-width: 50%;
 }
 
 @media (max-width: 575.98px) {

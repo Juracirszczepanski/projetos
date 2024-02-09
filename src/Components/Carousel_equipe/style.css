@@ -18,7 +18,8 @@
 }
 
 .img-carousel-equipe{
-    width: 200px;
+    width: 160px;
+    border-radius: 8px;
 }
 
 .card-content{
